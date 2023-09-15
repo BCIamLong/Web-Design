@@ -3,4 +3,6 @@
 *.docx
 *.tmp
 my-code/
-docx/
+docs/
+note-html-css/
+imgs/
