@@ -6,6 +6,14 @@ FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 
+/* 
+ COLORS SYSTEM
+ Main color: #087f5b;
+ Tints main color: #099268
+ Grey color: #343a40
+ Tints grey color: #495057
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +29,9 @@ body {
   * like in case you don't have internet and can't load typeface from google fonts and now sans-serif will be used
   * we also can add more options */
   font-family: "Inter", sans-serif;
+  color: #343a40;
+  /* * this is final accent for the page */
+  border-bottom: 8px solid #087f5b;
 }
 
 .container {
@@ -48,6 +59,41 @@ h2 {
   column-gap: 80px;
 }
 
+/* ! So notice it's not a button because this is a link because now we use link to link other page shop chair right not do anything like opening a model window
+* and so if it leads somewhere it should be a link and if it does something it should be a button */
+.btn:link,
+.btn:visited {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #087f5b;
+  border-radius: 50px;
+  background-color: #087f5b;
+  /* * because this is a links so anchor so it's inline element so it's not work with verticall space like margin bottom, top  so we need consvert it to inline-block and not block because it'll occupy all the space of line*/
+  display: inline-block;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #099268;
+  color: #343a40;
+}
+
+/* * In CSS we also dont want repeat our code so with button we have big button, small button, other button but they are button and they have some same common properties
+  --> So we can create .btn class to set common properties for all button and we don't need to repeat code in per button
+  * create btn--big, btn--small, other--btn and style the different properties */
+
+.btn--big {
+  padding: 16px 32px;
+  font-size: 18px;
+}
+
+.btn--small {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
@@ -58,6 +104,7 @@ header {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
   margin-top: 48px;
+  /* background-color: #63e6be; */
 }
 
 .header-text-box {
@@ -110,6 +157,11 @@ img {
 
 /* TESTIMONIAL */
 .testimonial-section {
+  background-color: #087f5b;
+  /* * remember that we can specify color in parent element and the child elements will be inhereted keep in mind */
+  color: #fff;
+  padding: 20px;
+  border-radius: 50px;
 }
 
 .testimonial-box {
@@ -170,7 +222,9 @@ h3 {
 }
 
 footer {
-  /* * footer content it not really important so we should descrease the footer font-size, and we also don't need format to less than 75px again because it's not important */
+  /* * footer content it not really important so we should descrease the footer font-size, and we also don't need format to less than 75px again because it's not important 
+  * The footer is not important text so we can apply the lighter colors for this*/
+  color: #495057;
   font-size: 14px;
   margin-bottom: 48px;
 }
