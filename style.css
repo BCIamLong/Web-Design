@@ -16,7 +16,11 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
-  font-family: sans-serif;
+  /* * now we will use typeface in CSS file
+  * and this means the priority font family will be Inter but if some reason it's not available then use this second option which is default sans-serif
+  * like in case you don't have internet and can't load typeface from google fonts and now sans-serif will be used
+  * we also can add more options */
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -30,6 +34,11 @@ section {
 }
 
 h2 {
+  /* * With header 2 we should try font-size from 32px to < h1 font-size, maybe it can bigger but in special situation 
+  = 32px 36px*/
+  font-size: 36px;
+  /* * Again with big text the letters space will auto inscrease so we should custom to natural */
+  letter-spacing: -0.5px;
   margin-bottom: 48px;
 }
 
@@ -56,10 +65,25 @@ header {
 }
 
 h1 {
+  /* * For Header we need the bigger font-size
+  = 36 / 44 / 52 / 62  
+  ! so what's happen if you don't have the paticular sizes system? well you will say so it should be 40 so again it should be 45 or why doesn't it be 50px, ... so you dont know that should you choose right
+  ! and again it'll take more our time for choose the good font-size*/
   margin-bottom: 24px;
+  font-size: 44px;
+  /* *With Big text we should use line height smaller 1.5 */
+  line-height: 1.1;
+  /* *We also should edit letters-spacing
+  ! because with big text the letter space will inscrease so it look unatural */
+  letter-spacing: -1px;
 }
 
 .header-text {
+  /* * With long-text we should have font-size from 20px to 32px 
+  = 18 / 20 / 24 / 30*/
+  font-size: 18px;
+  /* * With long-text we should have line-height >= 1.5 */
+  line-height: 1.7;
   margin-bottom: 24px;
 }
 
@@ -72,10 +96,16 @@ img {
 }
 
 .features-title {
+  /* ! Notice that: implements font-sizes between elements based on the hierarchy between the different headings and in general between all the different pieces of text on the site
+  ! like the text important we also make it bigger and smaller the text more important than this text */
+  font-size: 20px;
   margin-bottom: 16px;
 }
 
 .features-text {
+  font-size: 18px;
+  line-height: 1.7;
+  /* ! if we use line-height: 1.7 for text-long we should apply for all text-long why we don't want do our code messy right */
 }
 
 /* TESTIMONIAL */
@@ -88,10 +118,17 @@ img {
 }
 
 .testimonial-box h2 {
+  /* 20px 24px 30 
+  ! in this case we need the font-size with not break this text to two line*/
+  font-size: 24px;
   margin-bottom: 24px;
 }
 
 .testimonial-text {
+  /* * you can use the font-size and line-height we used for the normal text before
+  ! Notice: in big website or real website that we don't do it like this */
+  font-size: 18px;
+  line-height: 1.7;
   font-style: italic;
   margin-bottom: 24px;
 }
@@ -103,6 +140,7 @@ img {
 
 h3 {
   margin-bottom: 24px;
+  font-size: 24px;
 }
 
 .chair-details {
@@ -126,9 +164,13 @@ h3 {
 
 .chair-price {
   display: flex;
+  /* * Because price is important info and we need bold them and have good font-size */
+  font-size: 20px;
   justify-content: space-between;
 }
 
 footer {
+  /* * footer content it not really important so we should descrease the footer font-size, and we also don't need format to less than 75px again because it's not important */
+  font-size: 14px;
   margin-bottom: 48px;
 }
