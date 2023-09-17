@@ -94,6 +94,24 @@ h2 {
   padding: 8px 16px;
 }
 
+.feature-icon {
+  /* *so to defined color with Outline SVG file we use stroke property 
+  *so to defined color with Solid, Mini SVG file we use fill property*/
+  stroke: #087f5b;
+  /* ! we should be careful when we inscrease the icon the line of icon will also increase and it's not good 
+  * and so to edit the line of icon we can use: stroke-width property*/
+  stroke-width: 1.4;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+}
+
+.chair-factor-icon {
+  stroke: #087f5b;
+  width: 24px;
+  height: 24px;
+}
+
 /* ------------------------ */
 /* COMPONENT STYLES */
 /* ------------------------ */
