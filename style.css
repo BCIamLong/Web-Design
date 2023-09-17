@@ -63,12 +63,18 @@ h2 {
 * and so if it leads somewhere it should be a link and if it does something it should be a button */
 .btn:link,
 .btn:visited {
+  /* * With the button we want it completely rounded
+  * We have two way to do that:
+  = 1: only work if element is square, if element is square(hinh vuong) we can make it round by use border-radius: 50% 
+  = 2: other element is not square we can use this with big value like 50px, 100px... notice if the value is higher than the height element value it'll take the big value can effect and if you set more it'll also like this and not change anymore
+  */
+  border-radius: 50px;
+
   color: #fff;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
   border: 1px solid #087f5b;
-  border-radius: 50px;
   background-color: #087f5b;
   /* * because this is a links so anchor so it's inline element so it's not work with verticall space like margin bottom, top  so we need consvert it to inline-block and not block because it'll occupy all the space of line*/
   display: inline-block;
@@ -110,6 +116,16 @@ h2 {
   stroke: #087f5b;
   width: 24px;
   height: 24px;
+}
+
+img {
+  /* * Now we will set border radius for all images
+  * and to set border radius is very simple in CSS that use: botder-radius property 
+  * border-radius: length_value
+  * if length_value bigger it'll take more a corner of images, and it can also big to set this image to circle
+  ! The length_value depend on your typefaces, website personality....
+  * now with this website we have typeface is squared and we don't or use less border radius*/
+  border-radius: 8px;
 }
 
 /* ------------------------ */
@@ -183,11 +199,12 @@ img {
 
 /* TESTIMONIAL */
 .testimonial-section {
+  /* * Because this section contain image so we should set the border radius similar with image to look natural and beauty and consistent(nhat quan)*/
+  border-radius: 8px;
   background-color: #087f5b;
   /* * remember that we can specify color in parent element and the child elements will be inhereted keep in mind */
   color: #fff;
   padding: 20px;
-  border-radius: 50px;
 }
 
 .testimonial-box {
@@ -214,6 +231,9 @@ img {
 /* CHAIRS */
 
 .chair {
+  /* * We also have image in chair card so we need the chair box also border-radius to consistent with images */
+  border-radius: 8px;
+
   /*
   !https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
   * So now we want add shadow to chair cart  
@@ -232,6 +252,15 @@ img {
   *You can see the box shadow is bigger the current card right that’s cuz we set the fourth option which scale the box-shadow to 10px now it’s bigger than current box 10px and usually we did it with 0 */
   /* box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.1); */
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+}
+
+/* ! We need remove the border radius in the bottom of image in chair box cuz it create not good look feel */
+.chair img {
+  /* * to do that we can use new properties of border radius
+  *border-bottom-right-radius and border-bottom-left-radius to specify the border radius in bottom of right side and left side
+  * we can also create the button or other eleemnt with creatity by use these properties */
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .chair-box {
