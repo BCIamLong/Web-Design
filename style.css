@@ -41,14 +41,14 @@ body {
 
 header,
 section {
-  margin-bottom: 48px;
+  margin-bottom: 128px;
 }
 
 h2 {
   /* * With header 2 we should try font-size from 32px to < h1 font-size, maybe it can bigger but in special situation 
   = 32px 36px*/
   font-size: 36px;
-  /* * Again with big text the letters space will auto inscrease so we should custom to natural */
+  /* * Again with big text the letters space will auto increase so we should custom to natural */
   letter-spacing: -0.5px;
   margin-bottom: 48px;
 }
@@ -76,7 +76,7 @@ h2 {
   text-transform: uppercase;
   border: 1px solid #087f5b;
   background-color: #087f5b;
-  /* * because this is a links so anchor so it's inline element so it's not work with verticall space like margin bottom, top  so we need consvert it to inline-block and not block because it'll occupy all the space of line*/
+  /* * because this is a links so anchor so it's inline element so it's not work with vertically space like margin bottom, top  so we need convert it to inline-block and not block because it'll occupy all the space of line*/
   display: inline-block;
 }
 
@@ -86,7 +86,7 @@ h2 {
   color: #343a40;
 }
 
-/* * In CSS we also dont want repeat our code so with button we have big button, small button, other button but they are button and they have some same common properties
+/* * In CSS we also don't want repeat our code so with button we have big button, small button, other button but they are button and they have some same common properties
   --> So we can create .btn class to set common properties for all button and we don't need to repeat code in per button
   * create btn--big, btn--small, other--btn and style the different properties */
 
@@ -104,7 +104,7 @@ h2 {
   /* *so to defined color with Outline SVG file we use stroke property 
   *so to defined color with Solid, Mini SVG file we use fill property*/
   stroke: #087f5b;
-  /* ! we should be careful when we inscrease the icon the line of icon will also increase and it's not good 
+  /* ! we should be careful when we increase the icon the line of icon will also increase and it's not good 
   * and so to edit the line of icon we can use: stroke-width property*/
   stroke-width: 1.4;
   width: 40px;
@@ -120,7 +120,7 @@ h2 {
 
 img {
   /* * Now we will set border radius for all images
-  * and to set border radius is very simple in CSS that use: botder-radius property 
+  * and to set border radius is very simple in CSS that use: border-radius property 
   * border-radius: length_value
   * if length_value bigger it'll take more a corner of images, and it can also big to set this image to circle
   ! The length_value depend on your typefaces, website personality....
@@ -137,7 +137,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
-  margin-top: 48px;
+  margin-top: 64px;
   /* background-color: #63e6be; */
 }
 
@@ -156,14 +156,14 @@ h1 {
 
   /* * For Header we need the bigger font-size
   = 36 / 44 / 52 / 62  
-  ! so what's happen if you don't have the paticular sizes system? well you will say so it should be 40 so again it should be 45 or why doesn't it be 50px, ... so you dont know that should you choose right
+  ! so what's happen if you don't have the particular sizes system? well you will say so it should be 40 so again it should be 45 or why doesn't it be 50px, ... so you don't know that should you choose right
   ! and again it'll take more our time for choose the good font-size*/
   margin-bottom: 24px;
   font-size: 44px;
   /* *With Big text we should use line height smaller 1.5 */
   line-height: 1.1;
   /* *We also should edit letters-spacing
-  ! because with big text the letter space will inscrease so it look unatural */
+  ! because with big text the letter space will increase so it look unnatural */
   letter-spacing: -1px;
 }
 
@@ -202,7 +202,7 @@ img {
   /* * Because this section contain image so we should set the border radius similar with image to look natural and beauty and consistent(nhat quan)*/
   border-radius: 8px;
   background-color: #087f5b;
-  /* * remember that we can specify color in parent element and the child elements will be inhereted keep in mind */
+  /* * remember that we can specify color in parent element and the child elements will be inherited keep in mind */
   color: #fff;
   padding: 20px;
 }
@@ -222,10 +222,17 @@ img {
 .testimonial-text {
   /* * you can use the font-size and line-height we used for the normal text before
   ! Notice: in big website or real website that we don't do it like this */
+  /* * We should set the light for this text, because the white color is too highlight in this bright green back ground color so we can use very light gree color */
+  color: #c3fae8;
   font-size: 18px;
   line-height: 1.7;
   font-style: italic;
   margin-bottom: 24px;
+}
+.testimonial-author {
+  /* * we also need to add the gree light color but notice that need more green than the testimonial text why because we need to create the visual hierarchy right 
+  * and this now create a nice contrast between this author text and testimonial text*/
+  color: #96f2d7;
 }
 
 /* CHAIRS */
@@ -245,9 +252,9 @@ img {
   = the fourth value: is optional allow us to basically scale the shadow up, default it's 0
   = the last one: is color of the shadow
   * when we use color for shadow we need use with opacity and to dot hat we usually use the rgba() for that, rgba(0,0,0, 0.1)
-  ! the opacity is bellow 0.1(max) for shadow we can also specify it's greather like 0.3, 0.6 but it's too dark for shadow and it's unatural
+  ! the opacity is bellow 0.1(max) for shadow we can also specify it's greater like 0.3, 0.6 but it's too dark for shadow and it's unnatural
   * usually in interface design we want the light source to basically come from the top if we specify the first value 20px the light source look like from top across and its not we want therefore the first value usually we set it 0
-  * becasue for these cards we use medium shadow so the verticall offset of the second value is 20 px it's logic
+  * because for these cards we use medium shadow so the vertically offset of the second value is 20 px it's logic
   * So if we specify the third value now we can see obviously the shadow box because it’s not blur(mo) right
   *You can see the box shadow is bigger the current card right that’s cuz we set the fourth option which scale the box-shadow to 10px now it’s bigger than current box 10px and usually we did it with 0 */
   /* box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.1); */
@@ -258,13 +265,13 @@ img {
 .chair img {
   /* * to do that we can use new properties of border radius
   *border-bottom-right-radius and border-bottom-left-radius to specify the border radius in bottom of right side and left side
-  * we can also create the button or other eleemnt with creatity by use these properties */
+  * we can also create the button or other element with creativity by use these properties */
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 .chair-box {
-  padding: 24px;
+  padding: 32px;
 }
 h3 {
   margin-bottom: 24px;
@@ -273,14 +280,16 @@ h3 {
 
 .chair-details {
   list-style: none;
-  margin-bottom: 24px;
+  /* *We also add some space between chair detail and the price and add button, we need to add big space cuz this chair detail not include the button right  */
+  margin-bottom: 48px;
 }
 
 .chair-details li {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 24px;
+  /* * We should decrease the space between li element basically margin bottom cuz it looks detached */
+  margin-bottom: 12px;
 }
 
 .chair-details li:last-child {
@@ -295,10 +304,11 @@ h3 {
   /* * Because price is important info and we need bold them and have good font-size */
   font-size: 20px;
   justify-content: space-between;
+  align-items: center;
 }
 
 footer {
-  /* * footer content it not really important so we should descrease the footer font-size, and we also don't need format to less than 75px again because it's not important 
+  /* * footer content it not really important so we should decrease the footer font-size, and we also don't need format to less than 75px again because it's not important 
   * The footer is not important text so we can apply the lighter colors for this*/
   color: #495057;
   font-size: 14px;
